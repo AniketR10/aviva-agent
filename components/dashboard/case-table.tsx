@@ -9,9 +9,9 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Case } from "@/lib/types"
-import { formatDistanceToNow } from "date-fns"
+import { formatDistance, formatDistanceToNow } from "date-fns"
 
-export function CaseTable({ cases }: { cases: Case[] }) {
+export function CaseTable({ cases, virtualDate }: { cases: Case[], virtualDate: string }) {
   return (
     <Card>
       <CardHeader>
@@ -40,7 +40,7 @@ export function CaseTable({ cases }: { cases: Case[] }) {
                   <UrgencyBadge level={c.urgency} />
                 </TableCell>
                 <TableCell className="text-muted-foreground">
-                  {formatDistanceToNow(new Date(c.lastUpdateDate))} ago
+                  {formatDistance(new Date(c.lastUpdateDate), new Date(virtualDate))} ago
                 </TableCell>
               </TableRow>
             ))}
