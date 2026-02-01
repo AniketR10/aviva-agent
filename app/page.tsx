@@ -4,6 +4,7 @@ import { TimeControls } from '@/components/dashboard/time-controls';
 import { Button } from '@/components/ui/button';
 import { RefreshCcw } from 'lucide-react';
 import { AgentTrigger } from '@/components/dashboard/agent-trigger';
+import { ImportClientDialog } from '@/components/dashboard/client-dialog';
 
 export default async function Home() {
   const data = await getDashboardData();
@@ -20,7 +21,7 @@ export default async function Home() {
 
           <AgentTrigger/>
           <div className="text-right mr-4 border-r pr-4">
-            <p className="text-xs text-slate-400 font-bold uppercase">Virtual Date</p>
+            <p className="text-xs text-slate-400 font-bold uppercase">Date</p>
             <p className="font-mono text-lg">
               {new Date(data.virtualDate).toDateString()}
             </p>
@@ -29,6 +30,8 @@ export default async function Home() {
           <TimeControls />
           
           <div className="w-px h-8 bg-slate-200 mx-2" />
+
+          <ImportClientDialog />
 
           <form action={resetSimulation}>
             <Button className='cursor-pointer hover:bg-orange-100' variant="outline" size="sm">

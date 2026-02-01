@@ -1,84 +1,85 @@
 {
-  "virtualDate": "2026-02-01T11:59:32.758Z",
+  "virtualDate": "2026-02-08T11:59:32.758Z",
   "cases": [
     {
-      "id": "case-1",
-      "clientName": "Sarah Jenkins",
-      "providerName": "Alina",
-      "policyNumber": "AV-9982-X",
-      "status": "loa-sent-client",
-      "urgency": "normal",
-      "dateCreated": "2026-01-22T11:59:32.758Z",
-      "lastUpdateDate": "2026-02-01T11:59:32.758Z",
-      "nextActionDate": "2026-01-31T11:59:32.758Z",
-      "history": [
-        {
-          "id": "1",
-          "date": "2026-01-22T11:59:32.758Z",
-          "actor": "Advisor",
-          "action": "Case Created"
-        },
-        {
-          "id": "2",
-          "date": "2026-01-24T11:59:32.758Z",
-          "actor": "Advisor",
-          "action": "LOA Sent to Client"
-        },
-        {
-          "id": "8ovltw0rn",
-          "date": "2026-02-01T11:59:32.758Z",
-          "actor": "Agent",
-          "action": "Client has not signed. Sent SMS reminder."
-        }
-      ]
-    },
-    {
-      "id": "case-2",
-      "clientName": "Marcus Chen",
-      "providerName": "Legal & General",
-      "policyNumber": "LG-2231-P",
-      "status": "provider-ack",
-      "urgency": "high",
-      "dateCreated": "2026-01-12T11:59:32.758Z",
-      "lastUpdateDate": "2026-02-01T11:59:32.758Z",
-      "nextActionDate": "2026-01-29T11:59:32.758Z",
-      "history": [
-        {
-          "id": "1",
-          "date": "2026-01-12T11:59:32.758Z",
-          "actor": "Advisor",
-          "action": "LOA Signed by Client"
-        },
-        {
-          "id": "2",
-          "date": "2026-01-14T11:59:32.758Z",
-          "actor": "Advisor",
-          "action": "LOA Sent to Provider"
-        },
-        {
-          "id": "ja3lmey1i",
-          "date": "2026-02-01T11:59:32.758Z",
-          "actor": "Provider",
-          "action": "Received acknowledgement. SLA: 15 days."
-        }
-      ]
-    },
-    {
-      "id": "case-3",
-      "clientName": "Emily Blunt",
-      "providerName": "Royal London",
-      "policyNumber": "RL-777-X",
+      "id": "case-1769956903537",
+      "clientName": "ALAN & LYNNE PARTRIDGE",
+      "providerName": "BBC",
+      "policyNumber": "PN-0000",
       "status": "discovery",
-      "urgency": "normal",
-      "dateCreated": "2026-01-30T11:59:32.758Z",
-      "lastUpdateDate": "2026-01-30T11:59:32.758Z",
-      "nextActionDate": "2026-01-27T11:59:32.758Z",
+      "urgency": "high",
+      "dateCreated": "2026-02-01T14:41:43.537Z",
+      "lastUpdateDate": "2026-02-01T14:41:43.537Z",
+      "nextActionDate": "2026-02-01T14:41:43.537Z",
+      "clientContext": {
+        "netWorth": "£895,000",
+        "incomeSummary": "£92,000",
+        "goals": [
+          "Retire at 65 (Alan)",
+          "Lexus upgrade in 2026",
+          "Mediterranean villa purchase"
+        ],
+        "risks": [
+          "Lynne back problems (health)",
+          "Alan job security in declining radio industry"
+        ],
+        "occupations": [
+          "Alan: Regional Radio Presenter",
+          "Lynne: Dental Receptionist"
+        ],
+        "protection": [
+          "Alan: £200k Life Cover (expires 2030)",
+          "Lynne: £150k Life Cover (expires 2028)"
+        ],
+        "nextReviewDate": "28/02/2027",
+        "notes": "Alan is confident but defensive, ego tied to his radio career; Lynne is pragmatic; no children; discussions avoid children topic; Alan prefers authoritative data; lifestyle inflation risks; need to manage Alan's self‑image."
+      },
       "history": [
         {
           "id": "1",
-          "date": "2026-01-30T11:59:32.758Z",
-          "actor": "Advisor",
-          "action": "Discovery Meeting Notes Added"
+          "date": "2026-02-01T14:41:43.537Z",
+          "actor": "Agent",
+          "action": "Alan sent a text on 22/01/26 sharing Portugal villa listings."
+        }
+      ]
+    },
+    {
+      "id": "case-1769967015358",
+      "clientName": "Brian Potter",
+      "providerName": "BAE DB Pension",
+      "policyNumber": "PN-0000",
+      "status": "discovery",
+      "urgency": "high",
+      "dateCreated": "2026-02-01T17:30:15.358Z",
+      "lastUpdateDate": "2026-02-01T17:30:15.358Z",
+      "nextActionDate": "2026-02-01T17:30:15.358Z",
+      "clientContext": {
+        "netWorth": "£1.15m",
+        "incomeSummary": "£52,400/year",
+        "goals": [
+          "Simplify finances to reduce overwhelm",
+          "Provide £30k financial support to daughter Sarah",
+          "Consider downsizing the family home"
+        ],
+        "risks": [
+          "Arthritis knees and cardiac condition affecting health",
+          "Sarah's household financial pressure due to husband's job loss"
+        ],
+        "occupations": [
+          "Brian Potter: Retired Engineering Director, BAE Systems"
+        ],
+        "protection": [
+          "Brian Potter: £100,000 Life Cover (expires 2027), No Critical Illness cover"
+        ],
+        "nextReviewDate": "14/02/2027",
+        "notes": "Traditional, polite, stoic personality; emotionally reserved but deeply attached to late wife Margaret; strong relationship with daughter Sarah, distant from son Andrew; engineer mindset seeking structure but feels overwhelmed; prefers patient, step‑by‑step guidance, enjoys tea and biscuits, prefers meetings 60‑75 minutes, proud of 38‑year BAE career"
+      },
+      "history": [
+        {
+          "id": "1",
+          "date": "2026-02-01T17:30:15.358Z",
+          "actor": "Agent",
+          "action": "23/01/26 – Text noting a bungalow viewing that was ‘nice, but not right’"
         }
       ]
     }

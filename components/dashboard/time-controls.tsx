@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { advanceTime } from "@/app/actions";
 import { CalendarClock, FastForward } from "lucide-react";
 import { useState } from "react";
-import { toast } from "sonner"; // We'll set this up in a second, or use standard alert for now if toast isn't set up
+import { toast } from "sonner";
 
 export function TimeControls() {
   const [isPending, setIsPending] = useState(false);

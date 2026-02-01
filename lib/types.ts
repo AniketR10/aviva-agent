@@ -1,12 +1,7 @@
 
 export type CaseStatus = 
-  | 'discovery'  
-  | 'loa-drafting'     
-  | 'loa-sent-client' 
-  | 'processing-loa'   
-  | 'loa-sent-provider'
-  | 'provider-ack'    
-  | 'completed';      
+  | 'discovery' | 'loa-drafting' | 'loa-sent-client' | 'processing-loa'   
+  | 'loa-sent-provider' | 'provider-ack' | 'completed';      
 
 export type Urgency = 'normal' | 'high' | 'critical';
 
@@ -20,10 +15,13 @@ export interface LogEntry {
 
 export interface ClientContext {
   netWorth?: string;        
-  goals?: string[];        
-  risks?: string[];        
   incomeSummary?: string;   
-  notes?: string;     
+  goals?: string[];         
+  risks?: string[];         
+  occupations?: string[];   
+  protection?: string[];   
+  nextReviewDate?: string; 
+  notes?: string;           
 }
 
 export interface Case {
