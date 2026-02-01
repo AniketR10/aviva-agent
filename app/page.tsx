@@ -3,6 +3,7 @@ import { CaseTable } from '@/components/dashboard/case-table';
 import { TimeControls } from '@/components/dashboard/time-controls';
 import { Button } from '@/components/ui/button';
 import { RefreshCcw } from 'lucide-react';
+import { AgentTrigger } from '@/components/dashboard/agent-trigger';
 
 export default async function Home() {
   const data = await getDashboardData();
@@ -16,6 +17,8 @@ export default async function Home() {
         </div>
         
         <div className="flex gap-4 items-center bg-white p-4 rounded-lg shadow-sm border">
+
+          <AgentTrigger/>
           <div className="text-right mr-4 border-r pr-4">
             <p className="text-xs text-slate-400 font-bold uppercase">Virtual Date</p>
             <p className="font-mono text-lg">
