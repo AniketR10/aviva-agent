@@ -9,7 +9,7 @@
       "status": "loa-sent-client",
       "urgency": "normal",
       "dateCreated": "2026-01-22T11:59:32.758Z",
-      "lastUpdateDate": "2026-01-24T11:59:32.758Z",
+      "lastUpdateDate": "2026-02-01T11:59:32.758Z",
       "nextActionDate": "2026-01-31T11:59:32.758Z",
       "history": [
         {
@@ -23,6 +23,12 @@
           "date": "2026-01-24T11:59:32.758Z",
           "actor": "Advisor",
           "action": "LOA Sent to Client"
+        },
+        {
+          "id": "8ovltw0rn",
+          "date": "2026-02-01T11:59:32.758Z",
+          "actor": "Agent",
+          "action": "Client has not signed. Sent SMS reminder."
         }
       ]
     },
@@ -31,10 +37,10 @@
       "clientName": "Marcus Chen",
       "providerName": "Legal & General",
       "policyNumber": "LG-2231-P",
-      "status": "loa-sent-provider",
+      "status": "provider-ack",
       "urgency": "high",
       "dateCreated": "2026-01-12T11:59:32.758Z",
-      "lastUpdateDate": "2026-01-14T11:59:32.758Z",
+      "lastUpdateDate": "2026-02-01T11:59:32.758Z",
       "nextActionDate": "2026-01-29T11:59:32.758Z",
       "history": [
         {
@@ -48,6 +54,12 @@
           "date": "2026-01-14T11:59:32.758Z",
           "actor": "Advisor",
           "action": "LOA Sent to Provider"
+        },
+        {
+          "id": "ja3lmey1i",
+          "date": "2026-02-01T11:59:32.758Z",
+          "actor": "Provider",
+          "action": "Received acknowledgement. SLA: 15 days."
         }
       ]
     },
