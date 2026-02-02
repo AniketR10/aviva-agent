@@ -1,5 +1,5 @@
 {
-  "virtualDate": "2026-02-02T07:19:07.731Z",
+  "virtualDate": "2026-02-02T08:29:16.124Z",
   "cases": [
     {
       "id": "case-1",
@@ -8,19 +8,19 @@
       "policyNumber": "AV-9982-X",
       "status": "loa-sent-client",
       "urgency": "normal",
-      "dateCreated": "2026-01-23T07:19:07.731Z",
-      "lastUpdateDate": "2026-01-25T07:19:07.731Z",
-      "nextActionDate": "2026-02-01T07:19:07.731Z",
+      "dateCreated": "2026-01-23T08:29:16.124Z",
+      "lastUpdateDate": "2026-01-25T08:29:16.124Z",
+      "nextActionDate": "2026-02-01T08:29:16.124Z",
       "history": [
         {
           "id": "1",
-          "date": "2026-01-23T07:19:07.731Z",
+          "date": "2026-01-23T08:29:16.124Z",
           "actor": "Advisor",
           "action": "Case Created"
         },
         {
           "id": "2",
-          "date": "2026-01-25T07:19:07.731Z",
+          "date": "2026-01-25T08:29:16.124Z",
           "actor": "Advisor",
           "action": "LOA Sent to Client"
         }
@@ -33,19 +33,19 @@
       "policyNumber": "LG-2231-P",
       "status": "loa-sent-provider",
       "urgency": "high",
-      "dateCreated": "2026-01-13T07:19:07.731Z",
-      "lastUpdateDate": "2026-01-15T07:19:07.731Z",
-      "nextActionDate": "2026-01-30T07:19:07.731Z",
+      "dateCreated": "2026-01-13T08:29:16.124Z",
+      "lastUpdateDate": "2026-01-15T08:29:16.124Z",
+      "nextActionDate": "2026-01-30T08:29:16.124Z",
       "history": [
         {
           "id": "1",
-          "date": "2026-01-13T07:19:07.731Z",
+          "date": "2026-01-13T08:29:16.124Z",
           "actor": "Advisor",
           "action": "LOA Signed by Client"
         },
         {
           "id": "2",
-          "date": "2026-01-15T07:19:07.731Z",
+          "date": "2026-01-15T08:29:16.124Z",
           "actor": "Advisor",
           "action": "LOA Sent to Provider"
         }
@@ -58,31 +58,31 @@
       "policyNumber": "RL-777-X",
       "status": "discovery",
       "urgency": "normal",
-      "dateCreated": "2026-01-31T07:19:07.731Z",
-      "lastUpdateDate": "2026-01-31T07:19:07.731Z",
-      "nextActionDate": "2026-01-28T07:19:07.731Z",
+      "dateCreated": "2026-01-31T08:29:16.124Z",
+      "lastUpdateDate": "2026-01-31T08:29:16.124Z",
+      "nextActionDate": "2026-01-28T08:29:16.124Z",
       "history": [
         {
           "id": "1",
-          "date": "2026-01-31T07:19:07.731Z",
+          "date": "2026-01-31T08:29:16.124Z",
           "actor": "Advisor",
           "action": "Discovery Meeting Notes Added"
         }
       ]
     },
     {
-      "id": "case-1770016758532",
-      "clientName": "Brian Potter",
-      "providerName": "General Portfolio",
+      "id": "case-1770020971983",
+      "clientName": "BRIAN POTTER",
+      "providerName": "Advisory Firm",
       "policyNumber": "Pending",
       "status": "discovery",
       "urgency": "high",
-      "dateCreated": "2026-02-02T07:19:18.532Z",
-      "lastUpdateDate": "2026-02-02T07:19:18.533Z",
-      "nextActionDate": "2026-02-02T07:19:18.533Z",
+      "dateCreated": "2026-02-02T08:29:31.983Z",
+      "lastUpdateDate": "2026-02-02T08:29:31.983Z",
+      "nextActionDate": "2026-02-02T08:29:31.983Z",
       "clientContext": {
         "netWorth": "£1.15m",
-        "incomeSummary": "£52,400/year gross; net ~£44,434 after tax",
+        "incomeSummary": "£52,400/year (BAE DB Pension £38,900, State Pension £11,500, Investment income ~£2,000)",
         "goals": [
           "Continue adjusting emotionally to life without Margaret",
           "Simplify finances (too many accounts causing overwhelm)",
@@ -101,47 +101,65 @@
           "Emotional aversion to investment risk following bereavement"
         ],
         "nextSteps": [
-          "Before Next Review (2026): Prepare Margaret’s ISA transfer paperwork",
-          "Before Next Review (2026): Brian to discuss Sarah gift openly with Andrew",
-          "Before Next Review (2026): Continue bungalow viewings",
-          "At Next Review (2027): Execute ISA transfer",
-          "At Next Review (2027): Present consolidation plan and confirm next steps",
-          "At Next Review (2027): Finalise Sarah gift structure",
-          "At Next Review (2027): Review downsizing progress",
-          "At Next Review (2027): Discuss Australia travel timing",
-          "At Next Review (2027): Emotional wellbeing check-in",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Grief counselling and emotional support",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Cruse Bereavement support completed",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Monthly peer support group ongoing and beneficial",
-          "RECOMMENDATIONS STATUS - PENDING: Margaret’s ISA (£47k) consolidation",
-          "RECOMMENDATIONS STATUS - PENDING: Eligible for spousal ISA transfer",
-          "RECOMMENDATIONS STATUS - PENDING: Still in Margaret’s name due to emotional barrier",
-          "RECOMMENDATIONS STATUS - PENDING: Adviser to prepare paperwork; Brian only needs to sign",
-          "RECOMMENDATIONS STATUS - PENDING: Financial simplification",
-          "RECOMMENDATIONS STATUS - PENDING: Currently: 8 savings accounts, 2 ISAs, 1 investment platform",
-          "RECOMMENDATIONS STATUS - PENDING: Plan: reduce to 2–3 providers total",
-          "RECOMMENDATIONS STATUS - PENDING: Adviser to prepare step-by-step consolidation plan",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Downsizing exploration",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Target: 2-bed bungalow ~£450k",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Current home £625k → net release ~£150k after ~£25k costs",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Emotional attachment significant after 34 years",
-          "RECOMMENDATIONS STATUS - IN PROGRESS: Timeline flexible (“when it feels right”)",
-          "RECOMMENDATIONS STATUS - PENDING: £30k support for Sarah",
-          "RECOMMENDATIONS STATUS - PENDING: Option A) Gift £30k now (PET; affordable; fairness discussion with Andrew)",
-          "RECOMMENDATIONS STATUS - PENDING: Option B) Loan £30k (formal agreement; repayment risk; family strain)",
-          "RECOMMENDATIONS STATUS - PENDING: Option C) Advance on inheritance (documented reduction of Sarah’s £300k share)",
-          "RECOMMENDATIONS STATUS - PENDING: Recommendation remains: Option A, with transparency to Andrew",
-          "RECOMMENDATIONS STATUS - DECLINED: Equity release (Brian dislikes debt; prefers downsizing or retaining home)"
+          "RECOMMENDATIONS - IN PROGRESS: Grief counselling and emotional support",
+          "RECOMMENDATIONS - IN PROGRESS: Cruse Bereavement support completed",
+          "RECOMMENDATIONS - IN PROGRESS: Monthly peer support group ongoing and beneficial",
+          "RECOMMENDATIONS - PENDING: Margaret’s ISA (£47k) consolidation",
+          "RECOMMENDATIONS - PENDING: Eligible for spousal ISA transfer",
+          "RECOMMENDATIONS - PENDING: Still in Margaret’s name due to emotional barrier",
+          "RECOMMENDATIONS - PENDING: Adviser to prepare paperwork; Brian only needs to sign",
+          "RECOMMENDATIONS - PENDING: Financial simplification",
+          "RECOMMENDATIONS - PENDING: Currently: 8 savings accounts, 2 ISAs, 1 investment platform",
+          "RECOMMENDATIONS - PENDING: Plan: reduce to 2–3 providers total",
+          "RECOMMENDATIONS - PENDING: Adviser to prepare step-by-step consolidation plan",
+          "RECOMMENDATIONS - IN PROGRESS: Downsizing exploration",
+          "RECOMMENDATIONS - IN PROGRESS: Target: 2-bed bungalow ~£450k",
+          "RECOMMENDATIONS - IN PROGRESS: Current home £625k → net release ~£150k after ~£25k costs",
+          "RECOMMENDATIONS - IN PROGRESS: Emotional attachment significant after 34 years",
+          "RECOMMENDATIONS - IN PROGRESS: Timeline flexible (“when it feels right”)",
+          "RECOMMENDATIONS - PENDING: £30k support for Sarah",
+          "RECOMMENDATIONS - PENDING: Option A: Gift £30k now (PET; affordable; fairness discussion with Andrew)",
+          "RECOMMENDATIONS - PENDING: Option B: Loan £30k (formal agreement; repayment risk; family strain)",
+          "RECOMMENDATIONS - PENDING: Option C: Advance on inheritance (documented reduction of Sarah’s £300k share)",
+          "RECOMMENDATIONS - PENDING: Recommendation remains: Option A, with transparency to Andrew",
+          "UPCOMING ACTIONS - BEFORE NEXT REVIEW (2026): Prepare Margaret’s ISA transfer paperwork",
+          "UPCOMING ACTIONS - BEFORE NEXT REVIEW (2026): Brian to discuss Sarah gift openly with Andrew",
+          "UPCOMING ACTIONS - BEFORE NEXT REVIEW (2026): Continue bungalow viewings",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Execute ISA transfer",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Present consolidation plan and confirm next steps",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Finalise Sarah gift structure",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Review downsizing progress",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Discuss Australia travel timing",
+          "UPCOMING ACTIONS - AT NEXT REVIEW (2027): Emotional wellbeing check-in",
+          "UPCOMING ACTIONS - POST-REVIEW: Implement consolidations",
+          "UPCOMING ACTIONS - POST-REVIEW: Assist with gift execution if proceeding",
+          "UPCOMING ACTIONS - POST-REVIEW: Review travel insurance and medical disclosures"
         ],
         "occupations": [],
-        "protection": []
+        "protection": [],
+        "completedSteps": [
+          "RECOMMENDATIONS - IN PROGRESS: Grief counselling and emotional support",
+          "RECOMMENDATIONS - IN PROGRESS: Downsizing exploration"
+        ]
       },
       "history": [
         {
           "id": "1",
-          "date": "2026-02-02T07:19:18.533Z",
+          "date": "2026-02-02T08:29:31.983Z",
           "actor": "Agent",
-          "action": "15/01/26: Email from Sarah requesting support; 18/01/26: Emotional call with Brian regarding Sarah’s situation; 20/01/26: Coffee meeting – downsizing and Margaret anniversary discussed; 23/01/26: Text – bungalow viewed (“nice, but not right”)."
+          "action": "15/01/26: Email from Sarah requesting support; 18/01/26: Emotional call with Brian regarding Sarah’s situation; 20/01/26: Coffee meeting – downsizing and Margaret anniversary discussed; 23/01/26: Text – bungalow viewed (‘nice, but not right’)."
+        },
+        {
+          "id": "c8fqq4t98",
+          "date": "2026-02-02T08:30:28.650Z",
+          "actor": "Agent",
+          "action": "Completed action: \"RECOMMENDATIONS - IN PROGRESS: Grief counselling and emotional support\""
+        },
+        {
+          "id": "qo3lbtu2k",
+          "date": "2026-02-02T08:30:38.171Z",
+          "actor": "Agent",
+          "action": "Completed action: \"RECOMMENDATIONS - IN PROGRESS: Downsizing exploration\""
         }
       ]
     }

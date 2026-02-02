@@ -18,7 +18,8 @@ export interface ClientContext {
   incomeSummary?: string;   
   goals?: string[];         
   risks?: string[];
-  nextSteps?: string[];     
+  nextSteps?: string[];
+  completedSteps?: string[];     
   occupations?: string[];
   protection?: string[];
   nextReviewDate?: string;
