@@ -24,8 +24,8 @@ export async function ingestClientFile(rawText: string) {
     OUTPUT JSON STRUCTURE:
     {
       "clientName": "Name & Name",
-      "providerName": "Largest pension provider mentioned (or 'General Portfolio')",
-      "policyNumber": "Policy number if found (or 'Pending')",
+      "providerName": " pension provider mentioned",
+      "policyNumber": "Client ID: (in the top of the document)",
       "status": "discovery",
       "clientContext": {
          "netWorth": "Total Net Worth Value",
@@ -34,7 +34,7 @@ export async function ingestClientFile(rawText: string) {
          "risks": ["Risk 1", "Risk 2", "Risk 3", "Risk 4"],
          "occupations": ["Alan: Radio Presenter (£68k)", "Lynne: Receptionist"],
          "protection": ["Alan: £200k Life Cover", "Lynne: £150k Life Cover"],
-         "nextReviewDate": "Date from top of file",
+         "nextActionDate": "Date from top of file, "Next Review:" row",
          "notes": "Brief summary of sensitive notes (e.g. 'No children')"
       },
       "latestLog": "Summary of the most recent item in 'Recent Communication'"

@@ -59,7 +59,7 @@ export function CaseTable({ cases, virtualDate }: { cases: Case[], virtualDate: 
             <TableHeader>
               <TableRow>
                 <TableHead>Client</TableHead>
-                <TableHead>Provider</TableHead>
+                <TableHead>Client ID</TableHead>
                 <TableHead className="w-[50%]">Latest Action</TableHead>
                 <TableHead className="w-[15%] text-right pr-2">Last Update</TableHead>
                 <TableHead className="w-12.5"></TableHead> 
@@ -81,7 +81,13 @@ export function CaseTable({ cases, virtualDate }: { cases: Case[], virtualDate: 
                     onClick={() => setSelectedCase(c)}
                   >
                     <TableCell className="font-medium">{c.clientName}</TableCell>
-                    <TableCell>{c.providerName}</TableCell>
+                    
+                    <TableCell>
+                      <Badge variant="secondary" className="font-mono text-xs text-slate-600 bg-slate-100 hover:bg-slate-200 border-slate-200">
+                        {c.policyNumber}
+                      </Badge>
+                    </TableCell>
+
                     <TableCell>
                       {displayAction ? (
                         <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200 shadow-sm font-normal normal-case max-w-87.5 truncate block py-1">
@@ -95,9 +101,11 @@ export function CaseTable({ cases, virtualDate }: { cases: Case[], virtualDate: 
                         </Badge>
                       )}
                     </TableCell>
+
                     <TableCell className="w-[15%] text-right pr-2 text-muted-foreground whitespace-nowrap">
                       {formatDistanceToNow(new Date(c.lastUpdateDate), { addSuffix: true })}
                     </TableCell>
+                    
                     <TableCell>
                       <Button 
                         variant="ghost" 

@@ -13,7 +13,7 @@ import { Case, LogEntry } from "@/lib/types"
 import { formatDistanceToNow } from "date-fns"
 import { 
   Bot, User, Building2, FileText, Copy, 
-  AlertTriangle, Target, Wallet, ListTodo, Loader2, Sparkles, Check, CheckCircle2
+  AlertTriangle, Target, Wallet, ListTodo, Loader2, Sparkles, Check, X, CalendarClock, CheckCircle2
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { generateCallScript, completeActionStep } from "@/app/actions"
@@ -38,19 +38,18 @@ export function CaseDetailsDialog({ isOpen, onClose, caseData, virtualDate }: Ca
   const [localHistory, setLocalHistory] = useState<LogEntry[]>([]);
 
   useEffect(() => {
-  if (isOpen && caseData) {
-    setLocalCompleted(caseData.clientContext?.completedSteps || []);
+    if (isOpen && caseData) {
+      setLocalCompleted(caseData.clientContext?.completedSteps || []);
 
-    const sortedHistory = [...(caseData.history || [])].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
+      const sortedHistory = [...(caseData.history || [])].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
 
-    setLocalHistory(sortedHistory);
-
-    setScript(null);
-    setScriptSourceAction(null);
-  }
-}, [isOpen, caseData]);
+      setLocalHistory(sortedHistory);
+      setScript(null);
+      setScriptSourceAction(null);
+    }
+  }, [isOpen, caseData]);
 
 
   if (!caseData) return null
@@ -106,23 +105,41 @@ export function CaseDetailsDialog({ isOpen, onClose, caseData, virtualDate }: Ca
       if (!open) setScript(null);
       onClose();
     }}>
-      <DialogContent className="max-w-[96vw]! w-[96vw] h-[96vh] flex flex-col overflow-hidden font-sans p-0 gap-0 outline-none bg-slate-50">
+      <DialogContent className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 !max-w-[96vw] w-[96vw] h-[96vh] flex flex-col overflow-hidden font-sans p-0 gap-0 outline-none bg-slate-50 shadow-2xl rounded-lg border-0">
         
+        <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition-colors z-50 focus:outline-none"
+        >
+            <X className="w-5 h-5" />
+        </button>
+
         <div className="p-4 border-b border-slate-200 bg-white shrink-0 pr-16 shadow-sm z-20">
-            <DialogHeader className="space-y-0.5">
-            <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                <DialogTitle className="text-xl uppercase tracking-tight font-bold text-slate-900">
-                    {caseData.clientName}
-                </DialogTitle>
-                <Badge variant="outline" className="font-mono text-xs px-2 py-0.5 bg-slate-50 border-slate-200 text-slate-600">
-                    {caseData.policyNumber}
-                </Badge>
+            <DialogHeader className="space-y-2">
+                <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                        <DialogTitle className="text-xl uppercase tracking-tight font-bold text-slate-900">
+                            {caseData.clientName}
+                        </DialogTitle>
+                        <Badge variant="outline" className="font-mono text-xs px-2 py-0.5 bg-slate-50 border-slate-200 text-slate-600">
+                            {caseData.policyNumber}
+                        </Badge>
+                    </div>
                 </div>
-            </div>
-            <DialogDescription className="text-slate-500 text-sm flex items-center gap-2">
-                Provider: <span className="font-semibold text-slate-700">{caseData.providerName}</span>
-            </DialogDescription>
+
+                <div className="flex items-center gap-6 text-sm">
+                    <DialogDescription className="text-slate-500 m-0 flex items-center gap-2">
+                        Provider: <span className="font-semibold text-slate-700">{caseData.providerName}</span>
+                    </DialogDescription>
+                    
+                    <div className="flex items-center gap-1.5 text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
+                        <CalendarClock className="w-3.5 h-3.5 text-slate-500" />
+                        <span className="text-xs font-medium text-slate-500">Next Review:</span>
+                        <span className="text-xs font-bold text-slate-800">
+                           {caseData.nextActionDate || "Not Scheduled"}
+                        </span>
+                    </div>
+                </div>
             </DialogHeader>
         </div>
 
