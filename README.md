@@ -14,6 +14,9 @@ Agentic Chaser is an intelligent dashboard designed for financial advisors to au
 - **Status Tracking**  
   Visual badges showing the latest completed action (e.g., _"Eligible for spousal ISA transfer"_) or a fallback **"No Activity"** status.
 
+- **Search & Filter**  
+  A search bar that allows advisors to quickly find cases by **Client Name**, enabling fast access in large datasets.
+
 - **Dynamic Columns**
   - Client Name & Client ID badges  
   - Latest Action with AI-cleaned text (removes technical prefixes)  
@@ -52,8 +55,8 @@ Agentic Chaser is an intelligent dashboard designed for financial advisors to au
 ## 🛠️ Tech Stack
 
 - **Framework:** Next.js (App Router)  
-- **Database:** Postgres (Neon)  
-- **AI / LLM:** Groq SDK (openai/gpt-oss-120b)  
+- **Database:** Postgres ([Neon](https://neon.com/))  
+- **AI / LLM:** [Groq](https://groq.com/) SDK (openai/gpt-oss-120b)  
 - **Language:** TypeScript  
 - **Styling:** Tailwind CSS  
 - **UI Components:** shadcn/ui  
