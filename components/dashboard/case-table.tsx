@@ -11,16 +11,18 @@ import {
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input" 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Case } from "@/lib/types"
 import { formatDistanceToNow } from "date-fns"
 import { CaseDetailsDialog } from "./case-details"
-import { CheckCircle2, MinusCircle, Trash2 } from "lucide-react"
+import { CheckCircle2, MinusCircle, Trash2, Search } from "lucide-react"
 import { deleteCase } from "@/app/actions"
 
 export function CaseTable({ cases }: { cases: Case[] }) {
   const [selectedCase, setSelectedCase] = useState<Case | null>(null)
-  
+  const [searchTerm, setSearchTerm] = useState("")
+
   const [, setTick] = useState(0)
   useEffect(() => {
     const timer = setInterval(() => setTick(t => t + 1), 60000)
@@ -29,6 +31,10 @@ export function CaseTable({ cases }: { cases: Case[] }) {
 
   const sortedCases = [...cases].sort((a, b) => 
     new Date(b.dateCreated).getTime() - new Date(a.dateCreated).getTime()
+  );
+
+  const filteredCases = sortedCases.filter((c) => 
+    c.clientName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const cleanActionText = (text: string) => {
@@ -51,9 +57,20 @@ export function CaseTable({ cases }: { cases: Case[] }) {
   return (
     <>
       <Card>
-        <CardHeader>
-          <CardTitle>Active Cases ({cases.length})</CardTitle>
+        <CardHeader className="space-y-4 pb-4">
+          <CardTitle>Active Cases ({filteredCases.length})</CardTitle>
+          
+          <div className="relative w-full">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-500" />
+            <Input
+              placeholder="Search by client name..."
+              className="w-full pl-9 bg-slate-50 border-slate-200 focus:bg-white transition-colors"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
         </CardHeader>
+
         <CardContent>
           <Table>
             <TableHeader>
@@ -66,59 +83,67 @@ export function CaseTable({ cases }: { cases: Case[] }) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {sortedCases.map((c) => {
-                const completedSteps = c.clientContext?.completedSteps || [];
-                const rawLatestAction = completedSteps.length > 0 
-                  ? completedSteps[completedSteps.length - 1] 
-                  : null;
+              {filteredCases.length > 0 ? (
+                filteredCases.map((c) => {
+                  const completedSteps = c.clientContext?.completedSteps || [];
+                  const rawLatestAction = completedSteps.length > 0 
+                    ? completedSteps[completedSteps.length - 1] 
+                    : null;
 
-                const displayAction = rawLatestAction ? cleanActionText(rawLatestAction) : null;
+                  const displayAction = rawLatestAction ? cleanActionText(rawLatestAction) : null;
 
-                return (
-                  <TableRow 
-                    key={c.id} 
-                    className="cursor-pointer hover:bg-slate-50 transition-colors group"
-                    onClick={() => setSelectedCase(c)}
-                  >
-                    <TableCell className="font-medium">{c.clientName}</TableCell>
-                    
-                    <TableCell>
-                      <Badge variant="secondary" className="font-mono text-xs text-slate-600 bg-slate-100 hover:bg-slate-200 border-slate-200">
-                        {c.policyNumber}
-                      </Badge>
-                    </TableCell>
-
-                    <TableCell>
-                      {displayAction ? (
-                        <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200 shadow-sm font-normal normal-case max-w-87.5 truncate block py-1">
-                          <CheckCircle2 className="w-3 h-3 inline mr-1.5 -mt-0.5" />
-                          {displayAction}
+                  return (
+                    <TableRow 
+                      key={c.id} 
+                      className="cursor-pointer hover:bg-slate-50 transition-colors group"
+                      onClick={() => setSelectedCase(c)}
+                    >
+                      <TableCell className="font-medium">{c.clientName}</TableCell>
+                      
+                      <TableCell>
+                        <Badge variant="secondary" className="font-mono text-xs text-slate-600 bg-slate-100 hover:bg-slate-200 border-slate-200">
+                          {c.policyNumber}
                         </Badge>
-                      ) : (
-                        <Badge variant="outline" className="bg-slate-50 text-slate-400 border-slate-200 font-normal normal-case shadow-sm py-1">
-                           <MinusCircle className="w-3 h-3 inline mr-1.5 -mt-0.5 opacity-50" />
-                           No Activity
-                        </Badge>
-                      )}
-                    </TableCell>
-                    
-                    <TableCell className="w-[15%] text-right pr-2 text-muted-foreground whitespace-nowrap">
-                      {formatDistanceToNow(new Date(c.lastUpdateDate), { addSuffix: true })}
-                    </TableCell>
-                    
-                    <TableCell>
-                      <Button 
-                        variant="ghost" 
-                        size="icon" 
-                        className="h-8 w-8 text-slate-400 hover:text-red-600 hover:bg-red-50 opacity-0 group-hover:opacity-100 transition-all"
-                        onClick={(e) => handleDelete(e, c.id)}
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                )
-              })}
+                      </TableCell>
+
+                      <TableCell>
+                        {displayAction ? (
+                          <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200 shadow-sm font-normal normal-case max-w-87.5 truncate block py-1">
+                            <CheckCircle2 className="w-3 h-3 inline mr-1.5 -mt-0.5" />
+                            {displayAction}
+                          </Badge>
+                        ) : (
+                          <Badge variant="outline" className="bg-slate-50 text-slate-400 border-slate-200 font-normal normal-case shadow-sm py-1">
+                             <MinusCircle className="w-3 h-3 inline mr-1.5 -mt-0.5 opacity-50" />
+                             No Activity
+                          </Badge>
+                        )}
+                      </TableCell>
+                      
+                      <TableCell className="w-[15%] text-right pr-2 text-muted-foreground whitespace-nowrap">
+                        {formatDistanceToNow(new Date(c.lastUpdateDate), { addSuffix: true })}
+                      </TableCell>
+                      
+                      <TableCell>
+                        <Button 
+                          variant="ghost" 
+                          size="icon" 
+                          className="h-8 w-8 text-slate-400 hover:text-red-600 hover:bg-red-50 opacity-0 group-hover:opacity-100 transition-all"
+                          onClick={(e) => handleDelete(e, c.id)}
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  )
+                })
+              ) : (
+                <TableRow>
+                  <TableCell colSpan={5} className="h-24 text-center text-slate-500">
+                    No results found for "{searchTerm}"
+                  </TableCell>
+                </TableRow>
+              )}
             </TableBody>
           </Table>
         </CardContent>
