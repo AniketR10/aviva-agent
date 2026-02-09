@@ -84,7 +84,7 @@ npm install
 ### 3. Configure Environment Variables
 Create a .env file in the root directory and add the following keys as it is:
 ```bash
-GROQ_API_KEY="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"
+GROQ_API_KEY="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"
 
 DATABASE_URL="postgresql://neondb_owner:npg_nTe3sJIQAB2g@ep-rough-shadow-a1049bzc.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
